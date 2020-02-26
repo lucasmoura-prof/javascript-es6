@@ -1,7 +1,6 @@
-"use strict";
-
 // Uma das funcionalidades mais usadas do ES6
-var array = [1, 3, 4, 5, 6];
+const array = [1, 3, 4, 5, 6];
+
 /*
 const newArray = array.map(function (item) { // essa função não tem nome né? (anônima)
     return item * 2;
@@ -19,27 +18,20 @@ Passo-a-passo:
         3.2.2 colocar diretamente depois da flechinha (=>) (sem o uso das chaves)
 */
 
-var newArray = array.map(function (item) {
-  return item * 2;
-}); // deverá ser usada em ambiente de função anônima
+const newArray = array.map(item => item * 2);
+// deverá ser usada em ambiente de função anônima
 
-console.log(newArray); // Criar funções usando constantes
+console.log(newArray);
 
-var test = function test() {
-  console.log('oi'); // não é recomendado fazer issooooo!!! Só exemplificando
-};
+// Criar funções usando constantes
+const test = () => {
+    console.log('oi'); // não é recomendado fazer issooooo!!! Só exemplificando
+}
 
-var test2 = function test2() {
-  return [1, 2, 3];
-}; // retornar um objeto:
+const test2 = () => [1, 2, 3];
+// retornar um objeto:
 //const test3 = () => { nome: 'Lucas' }; // vai imprimir undefined, jeito correto abaixo
-
-
-var test3 = function test3() {
-  return {
-    nome: 'Lucas'
-  };
-};
+const test3 = () => ({ nome: 'Lucas' });
 
 test();
 console.log(test2());

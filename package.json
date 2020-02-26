@@ -12,6 +12,6 @@
     "@babel/preset-env": "^7.8.4"
   },
   "scripts": {
-    "dev": "babel ./array.js -o bundle.js -w"
+    "dev": "babel ./arrow-functions.js -o bundle.js -w"
   }
 }
