@@ -18,6 +18,25 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+var Matematica =
+/*#__PURE__*/
+function () {
+  function Matematica() {
+    _classCallCheck(this, Matematica);
+  }
+
+  _createClass(Matematica, null, [{
+    key: "soma",
+    // método estáticos trás informações não relacionadas ao objeto
+    // geralmente nem vai ter constructor, só para acessar as funcionalidades
+    value: function soma(valueA, valueB) {
+      return valueA + valueB;
+    }
+  }]);
+
+  return Matematica;
+}();
+
 var List =
 /*#__PURE__*/
 function () {
@@ -71,3 +90,4 @@ document.getElementById('novotodo').onclick = function () {
 };
 
 MinhaLista.showUser();
+console.log(Matematica.soma(1, 2));

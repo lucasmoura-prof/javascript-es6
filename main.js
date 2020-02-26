@@ -1,3 +1,11 @@
+class Matematica {
+    // método estáticos trás informações não relacionadas ao objeto
+    // geralmente nem vai ter constructor, só para acessar as funcionalidades
+    static soma(valueA, valueB) {
+        return valueA + valueB;
+    }
+}
+
 class List {
     constructor() {
         this.data = [];
@@ -21,7 +29,7 @@ class TodoList extends List {
     }
 }
 
-const MinhaLista = new TodoList();
+var MinhaLista = new TodoList();
 
 // Evento que decteta que o botão foi clicado
 document.getElementById('novotodo').onclick = function () {
@@ -29,3 +37,5 @@ document.getElementById('novotodo').onclick = function () {
 }
 
 MinhaLista.showUser();
+
+console.log(Matematica.soma(1, 2));
