@@ -36,3 +36,17 @@ const test3 = () => ({ nome: 'Lucas' });
 test();
 console.log(test2());
 console.log(test3()); // undefined porque as chaves é utilizada para o corpo da função e não para o objeto
+
+
+
+// Valores padrão de funções
+/*function soma (a = 3, b = 6) {
+    return a + b;
+}
+*/
+
+// Versão arrow function
+const soma = (a = 3, b = 6) => a + b;
+
+console.log(soma(1)); // não especificou o segundo valor (b). Imprime 7
+console.log(soma());  // Imprime 9

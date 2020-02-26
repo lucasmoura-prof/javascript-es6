@@ -44,3 +44,20 @@ var test3 = function test3() {
 test();
 console.log(test2());
 console.log(test3()); // undefined porque as chaves é utilizada para o corpo da função e não para o objeto
+// Valores padrão de funções
+
+/*function soma (a = 3, b = 6) {
+    return a + b;
+}
+*/
+// Versão arrow function
+
+var soma = function soma() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return a + b;
+};
+
+console.log(soma(1)); // não especificou o segundo valor (b). Imprime 7
+
+console.log(soma()); // Imprime 9
