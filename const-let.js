@@ -6,3 +6,16 @@ const user = { name: 'Lucas' };
 user.name = 'Joao';
 console.log(user.name);
 
+function test(x) {
+    let y = 2;
+
+    if (x > 5) {
+        let y = 4;
+        console.log(x, y);
+    }
+}
+
+// console.log(y); // erro: y não definido, escopos diferentes
+
+test(10);
+
