@@ -1,20 +1,20 @@
-class TodoList {
-    // Primeiro método a ser executado ao instanciar um novo objeto da classe
+class List {
     constructor() {
-        // ações que disparam assim que o objeto for criado
-        // iniciar variáveis
-        this.todos = [];
+        this.data = [];
     }
 
-    addTodo() {
-        this.todos.push('Novo todo');
-        console.log(this.todos);
+    add(value) {
+        this.data.push(value);
+        console.log(this.data);
     }
+}
+
+class TodoList extends List {
 }
 
 const MinhaLista = new TodoList();
 
 // Evento que decteta que o botão foi clicado
 document.getElementById('novotodo').onclick = function () {
-    MinhaLista.addTodo();
+    MinhaLista.add('Novo todo');
 }
