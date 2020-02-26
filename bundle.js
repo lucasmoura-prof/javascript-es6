@@ -57,3 +57,50 @@ var exibirMensagem2 = function exibirMensagem2() {
 exibirMensagem();
 exibirMensagem2(); // imprime undefined
 // Conclusão: evite esse tipo de problema declarando todas as variáveis na primeira linha
+
+var exibeMensagem = function exibeMensagem() {
+  // içou escopoFuncao (var)
+  if (true) {
+    var escopoFuncao = 'Caelum';
+    var _escopoBloco = 'Alura';
+    console.log(_escopoBloco); // Alura 
+  }
+
+  console.log(escopoFuncao); // Caelum 
+
+  console.log(escopoBloco);
+}; //exibeMensagem(); // let irá garantir o escopo do bloco
+
+
+var exibeMensagem3 = function exibeMensagem3() {
+  var mensagemForaDoIf = "Teste1";
+
+  if (mensagemForaDoIf == "Teste1") {
+    var mensagemDentroDoIf = "JavaScript"; // a variável foi elevada para o topo do contexto
+  }
+
+  console.log(mensagemForaDoIf); // MATERA
+
+  console.log(mensagemDentroDoIf); // JavaScript
+};
+
+var exibeMensagem3ComLet = function exibeMensagem3ComLet() {
+  var mensagemForaDoIf = "Teste2";
+
+  if (mensagemForaDoIf == "Teste2") {
+    var mensagemDentroDoIf = "JS";
+    console.log(mensagemDentroDoIf); // imprime JS
+  } // mensagemDentroDoIf não é mais acessível a partir deste ponto
+
+
+  console.log(mensagemForaDoIf); // imprime MATERA
+  // apenas mensagemForaDoIf existe nesse ponto
+};
+
+exibeMensagem3();
+exibeMensagem3ComLet();
+void function () {
+  var mensagem;
+  console.log(mensagem); // Imprime undefined 
+  // inicialização default com valor undefined para mensagem 
+}();
