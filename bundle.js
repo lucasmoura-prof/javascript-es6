@@ -6,20 +6,25 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var Teste =
+var TodoList =
 /*#__PURE__*/
 function () {
-  function Teste() {
-    _classCallCheck(this, Teste);
+  // Primeiro método a ser executado ao instanciar um novo objeto da classe
+  function TodoList() {
+    _classCallCheck(this, TodoList);
+
+    // ações que disparam assim que o objeto for criado
+    // iniciar variáveis
+    this.todos = [];
   }
 
-  _createClass(Teste, [{
-    key: "metodo",
-    value: function metodo() {}
-  }, {
-    key: "outro",
-    value: function outro() {}
+  _createClass(TodoList, [{
+    key: "addTodo",
+    value: function addTodo() {
+      this.todos.push('Novo todo');
+      console.log(this.todos);
+    }
   }]);
 
-  return Teste;
+  return TodoList;
 }();
