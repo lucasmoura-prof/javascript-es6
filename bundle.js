@@ -28,3 +28,9 @@ function () {
 
   return TodoList;
 }();
+
+var MinhaLista = new TodoList(); // Evento que decteta que o botão foi clicado
+
+document.getElementById('novotodo').onclick = function () {
+  MinhaLista.addTodo();
+};

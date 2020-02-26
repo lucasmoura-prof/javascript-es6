@@ -11,3 +11,10 @@ class TodoList {
         console.log(this.todos);
     }
 }
+
+const MinhaLista = new TodoList();
+
+// Evento que decteta que o botão foi clicado
+document.getElementById('novotodo').onclick = function () {
+    MinhaLista.addTodo();
+}
