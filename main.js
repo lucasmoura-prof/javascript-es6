@@ -10,6 +10,15 @@ class List {
 }
 
 class TodoList extends List {
+    constructor() {
+        super(); // chamar o método constructor da classe pai (List)
+
+        this.user = 'Joao';
+    }
+
+    showUser() {
+        console.log(this.user);
+    }
 }
 
 const MinhaLista = new TodoList();
@@ -18,3 +27,5 @@ const MinhaLista = new TodoList();
 document.getElementById('novotodo').onclick = function () {
     MinhaLista.add('Novo todo');
 }
+
+MinhaLista.showUser();

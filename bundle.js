@@ -44,10 +44,22 @@ function (_List) {
   _inherits(TodoList, _List);
 
   function TodoList() {
+    var _this;
+
     _classCallCheck(this, TodoList);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(TodoList).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(TodoList).call(this)); // chamar o método constructor da classe pai (List)
+
+    _this.user = 'Joao';
+    return _this;
   }
+
+  _createClass(TodoList, [{
+    key: "showUser",
+    value: function showUser() {
+      console.log(this.user);
+    }
+  }]);
 
   return TodoList;
 }(List);
@@ -57,3 +69,5 @@ var MinhaLista = new TodoList(); // Evento que decteta que o botão foi clicado
 document.getElementById('novotodo').onclick = function () {
   MinhaLista.add('Novo todo');
 };
+
+MinhaLista.showUser();
