@@ -107,3 +107,14 @@ const user1 = {
 const user2 = { ...user1, nome: 'Lucas' };
 
 console.log(user2);
+
+
+
+// Template Literals
+const fullName = 'Uzumaki Naruto';
+const age = 22;
+
+//
+//console.log('Meu nome é ' + fullName + ' e tenho ' + age + ' anos');
+console.log(`Meu nome é ${fullName} e tenho ${age} anos!`); // usando sinal de crase
+

@@ -122,4 +122,10 @@ var user2 = _objectSpread({}, user1, {
   nome: 'Lucas'
 });
 
-console.log(user2);
+console.log(user2); // Template Literals
+
+var fullName = 'Uzumaki Naruto';
+var age = 22; //
+//console.log('Meu nome é ' + fullName + ' e tenho ' + age + ' anos');
+
+console.log("Meu nome \xE9 ".concat(fullName, " e tenho ").concat(age, " anos!")); // usando sinal de crase
