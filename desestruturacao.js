@@ -30,3 +30,14 @@ function mostrarNome({ nome, idade }) {
 }
 
 mostrarNome();
+
+
+// Operadores rest e spread
+// ...
+// Precisa instalar um novo pacote (rest e spread) ainda não foram acoplados a versão principal do Babel
+// Sendo necessário instalar eles como plugins
+// yarn add @babel/plugin-proposal-object-rest-spread
+// Copiar essa informação para configurar o nosso babel
+// Dentro do .babelrc, adicionar a propriedade (array) plugins e adiciona a string "@babel/plugin-proposal-object-rest-spread"
+// Reinicia o babel
+
