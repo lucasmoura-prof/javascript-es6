@@ -27,12 +27,12 @@ Será instalado a versão `12.16.1` do node. Execute o comando abaixo:
 Após, digite o comando abaixo para verificar se foi instalado com sucesso:
 
     node -v
+
 Deverá exibir uma mensagem com a versão instalada.
 
 Link de referência: [aqui](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04-pt)
 
 ## Instalando o Yarn
-
 Primeiro, execute o comando abaixo para importar o repositório que iremos baixar o Yarn:
 
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -49,3 +49,41 @@ Execute os comandos abaixo para fazer a instalação:
 Para confirmar se foi instalado com sucesso, digite o comando abaixo:
 
     yarn --version
+
+## Outras Configurações
+
+### Configurando o arquivo .gitignore
+Adicione a seguinte linha ao arquivo `.gitignore`:
+
+    /node_modules/
+
+### Configurando o Yarn
+Inicie o Yarn dentro do repositório do projeto:
+
+    yarn init
+
+Adicione estas dependências ao Yarn:
+
+    yarn add @babel/cli
+    yarn add @babel/core
+    yarn add @babel/preset-env
+    yarn add @babel/plugin-proposal-object-rest-spread
+
+### Criando o arquivo .babelrc
+Crie o arquivo `.babelrc`, e adicione as seguintes linhas ao seu conteúdo:
+
+    {
+        "presets": ["@babel/preset-env"],
+        "plugins": ["@babel/plugin-proposal-object-rest-spread"]
+    }
+
+### Configurando um script do Babel através do Yarn
+Adicione o seguinte script ao arquivo `package.json`:
+
+    "scripts": {
+        "dev": "babel ./main.js -o bundle.js -w"
+    }
+
+Este script é usado para que `main.js`, ao ser salvo, seja compilado em `bundle.js` de forma automática. Execute o script com o comando:
+
+    yarn dev
